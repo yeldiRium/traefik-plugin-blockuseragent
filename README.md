@@ -44,3 +44,14 @@ You can use regexAllow to make exception on blocking regex.
       [[http.services.my-service.loadBalancer.servers]]
         url = "http://127.0.0.1"
 ```
+
+## Omit logs for blocked requests
+
+By default, this plugin logs each blocked request.
+To prevent this, you can set the `quiet` configuration parameter:
+
+```toml
+[http.middlewares]
+  [http.middlewares.block-foo.plugin.blockuseragent]
+    quiet = true
+```
