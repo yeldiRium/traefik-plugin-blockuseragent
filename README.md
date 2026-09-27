@@ -55,3 +55,14 @@ To prevent this, you can set the `quiet` configuration parameter:
   [http.middlewares.block-foo.plugin.blockuseragent]
     quiet = true
 ```
+
+## Manual testing
+
+To manually test the current state of the plugin, you can start traefik using the included [compose file](./compose.yaml).
+*Beware that this mounts the docker daemon socket* and uses it to configure traefik via docker labels.
+The current configuration blocks requests whose useragent includes the string `blockthis`.
+To test this, use e.g. curl:
+
+```bash
+curl --header "User-Agent: blockthis" -i http://localhost/
+```
