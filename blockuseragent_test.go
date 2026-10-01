@@ -36,6 +36,8 @@ func TestNew(t *testing.T) {
 		},
 	}
 
+	quiet := false
+
 	for _, test := range tests {
 		t.Run(test.desc, func(t *testing.T) {
 			t.Parallel()
@@ -43,6 +45,7 @@ func TestNew(t *testing.T) {
 			cfg := &Config{
 				RegexAllow: test.regexAllow,
 				Regex:      test.regexDeny,
+				Quiet:      &quiet,
 			}
 
 			if _, err := New(context.Background(), nil, cfg, "name"); test.expErr && err == nil {
@@ -192,6 +195,8 @@ func TestServeHTTP(t *testing.T) {
 		},
 	}
 
+	quiet := false
+
 	for _, test := range tests {
 		t.Run(test.desc, func(t *testing.T) {
 			t.Parallel()
@@ -199,6 +204,7 @@ func TestServeHTTP(t *testing.T) {
 			cfg := &Config{
 				RegexAllow: test.regexAllow,
 				Regex:      test.regexDeny,
+				Quiet:      &quiet,
 			}
 
 			nextCall := false
