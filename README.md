@@ -1,6 +1,6 @@
 # Block User-Agent
 
-[![Build Status](https://github.com/agence-gaya/traefik-plugin-blockuseragent/workflows/Main/badge.svg?branch=master)](https://github.com/agence-gaya/traefik-plugin-blockuseragent/actions)
+This repo is a fork of [agence-gaya/traefik-plugin-blockuseragent](https://github.com/agence-gaya/traefik-plugin-blockuseragent) with some changes.
 
 Block User-Agent is a middleware plugin for [Traefik](https://github.com/traefik/traefik) which sends an HTTP `403 Forbidden` 
 response when the requested HTTP User-Agent header matches one the configured [regular expressions](https://github.com/google/re2/wiki/Syntax).
@@ -14,7 +14,7 @@ response when the requested HTTP User-Agent header matches one the configured [r
     token="xxx"
 
 [experimental.plugins.blockuseragent]
-    modulename = "github.com/agence-gaya/traefik-plugin-blockuseragent"
+    modulename = "github.com/yeldirium/traefik-plugin-blockuseragent"
     version = "vX.Y.Z"
 ```
 

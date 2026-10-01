@@ -1,7 +1,7 @@
-displayName: Block User-Agent
-summary: Blocks HTTP requests with a User-Agent matching the configured regex.
+displayName: Block User-Agent (fork)
+summary: Blocks HTTP requests with a User-Agent matching the configured regex. Fork of agence-gaya/traefik-plugin-blockuseragent.
 type: middleware
-import: github.com/agence-gaya/traefik-plugin-blockuseragent
+import: github.com/yeldirium/traefik-plugin-blockuseragent
 compatibility: TODO
 testData:
   Regex:
