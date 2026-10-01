@@ -16,10 +16,7 @@ in
   packages = with pkgs; [
     (go.withTools [
       "gopls"
-      {
-        name = "golangci-lint";
-        version = "1.61.0";
-      }
+      "golangci-lint"
       "delve"
     ])
     gotestsum

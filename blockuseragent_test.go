@@ -8,6 +8,8 @@ import (
 )
 
 func TestNew(t *testing.T) {
+	t.Parallel()
+
 	tests := []struct {
 		desc       string
 		regexAllow []string
@@ -36,6 +38,8 @@ func TestNew(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.desc, func(t *testing.T) {
+			t.Parallel()
+
 			cfg := &Config{
 				RegexAllow: test.regexAllow,
 				Regex:      test.regexDeny,
@@ -49,6 +53,8 @@ func TestNew(t *testing.T) {
 }
 
 func TestServeHTTP(t *testing.T) {
+	t.Parallel()
+
 	tests := []struct {
 		desc          string
 		regexAllow    []string
@@ -188,6 +194,8 @@ func TestServeHTTP(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.desc, func(t *testing.T) {
+			t.Parallel()
+
 			cfg := &Config{
 				RegexAllow: test.regexAllow,
 				Regex:      test.regexDeny,
