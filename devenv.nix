@@ -21,7 +21,14 @@ in
     ])
     gotestsum
     go-mod-upgrade
+    yaegi
   ];
+
+  enterTest = # bash
+    with pkgs; ''
+      ${lib.getExe gotestsum} -- ./...
+      ${lib.getExe yaegi} test -v .
+    '';
 
   git-hooks.hooks = {
     check-merge-conflicts.enable = true;
