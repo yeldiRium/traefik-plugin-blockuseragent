@@ -46,6 +46,13 @@ in
       files = "\\.go$";
       pass_filenames = false;
     };
+    govendor = {
+      enable = true;
+      name = "go vendor";
+      entry = "${lib.getExe go} mod vendor";
+      always_run = true;
+      pass_filenames = false;
+    };
 
     # nix
     nixfmt.enable = true;
