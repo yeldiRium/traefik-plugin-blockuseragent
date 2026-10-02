@@ -10,9 +10,6 @@ response when the requested HTTP User-Agent header matches one the configured [r
 ## StaticUpdate 
 
 ```toml
-[pilot]
-    token="xxx"
-
 [experimental.plugins.blockuseragent]
     modulename = "github.com/yeldirium/traefik-plugin-blockuseragent"
     version = "vX.Y.Z"
