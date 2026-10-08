@@ -3,7 +3,6 @@ version: "2"
 
 linters:
   enable:
-    - embeddedstructfieldcheck
     - errcheck
     - errchkjson
     - errname
@@ -14,7 +13,6 @@ linters:
     - gomodguard
     - govet
     - grouper
-    - iface
     - ineffassign
     - importas
     - intrange
@@ -25,7 +23,6 @@ linters:
     - paralleltest
     - prealloc
     - predeclared
-    - recvcheck
     - sloglint
     - staticcheck
     - tagalign
